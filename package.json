@@ -1,0 +1,99 @@
+{
+  "name": "dsh-literature-hub",
+  "version": "2.1.3",
+  "description": "文献库：DeepSeek Harness 的本地阅读、批注、笔记与离线 Whisper 转写插件",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "reader",
+    "vendor",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "licenses",
+    "THIRD-PARTY-NOTICES.md",
+    "locale",
+    "icon.svg",
+    "docs"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "obsidian",
+    "literature",
+    "pdf",
+    "whisper",
+    "offline"
+  ],
+  "author": "3469915488-oss",
+  "homepage": "https://github.com/3469915488-oss/dsh-literature-hub#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3469915488-oss/dsh-literature-hub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/3469915488-oss/dsh-literature-hub/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.5 <0.3.0-0",
+    "node": ">=24"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.2.1-rc.5 <0.3.0-0",
+    "@deepseek-ai/schemastery": "~3.18.5"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  },
+  "icon": "./icon.svg",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node tools/build-assets.mjs",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "1.8.0",
+    "linkedom": "0.18.15",
+    "mammoth": "1.13.0",
+    "sanitize-html": "2.18.1",
+    "turndown": "7.2.4",
+    "turndown-plugin-gfm": "1.0.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "lucide": "1.66.0",
+    "markdown-it": "15.0.3",
+    "prosemirror-commands": "1.7.2",
+    "prosemirror-dropcursor": "1.8.4",
+    "prosemirror-gapcursor": "1.4.1",
+    "prosemirror-history": "1.5.1",
+    "prosemirror-keymap": "1.2.3",
+    "prosemirror-markdown": "1.13.9",
+    "prosemirror-model": "1.25.12",
+    "prosemirror-schema-list": "1.6.0",
+    "prosemirror-state": "1.4.4",
+    "prosemirror-view": "1.42.9"
+  }
+}
