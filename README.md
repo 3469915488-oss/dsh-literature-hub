@@ -4,6 +4,12 @@ DeepSeek Harness 的本地文献库插件。它把 Obsidian 知识库中的 PDF�
 
 适用 DeepSeek Harness `>=0.2.1-rc.5 <0.3.0-0` 与 Node.js 24 或更高版本。代码使用 MIT 许可证，上游许可证见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
 
+## 界面展示
+
+![文献库界面结构示意](docs/assets/overview.png)
+
+上图使用示例资料绘制，展示真实界面的工作区域。左侧是 Obsidian 目录和当前层检索，中间阅读原文，右侧上方固定批注栏，右侧下方为同一篇文献的笔记和录音。Harness 工作区侧栏保持原生显示，可继续进入插件、自动化任务与会话记录。
+
 ## 安装
 
 在 Harness 的「插件」页选择「添加插件」，输入固定发布版本：
@@ -24,6 +30,16 @@ github:3469915488-oss/dsh-literature-hub#v2.1.3
 
 完整操作见 [使用指南](docs/使用指南.md)。
 
+## 五分钟开始
+
+1. 在 Harness 的「插件」页添加并启用文献库，重启应用。
+2. 打开主侧栏的「文献库」，在左侧选择已有目录或创建文件夹。
+3. 点击「导入资料」，导入 PDF、DOCX、Markdown 或 HTML 文件。
+4. 在正文选中文字，选择高亮、下划线、勾画、旁注或向伴读提问。
+5. 打开「笔记」，编辑随记，或录制音频后点击「转写」。需要 AI 总结时，在录音详情中点击「智能总结」。
+
+完整的按钮位置、保存规则和故障处理见 [界面导览](docs/界面导览.md)、[使用指南](docs/使用指南.md) 与 [Whisper 离线转写部署](docs/Whisper部署.md)。
+
 ## 功能
 
 - 真实文件夹树，支持多级目录、导入、改名、移动、当前层搜索和可恢复删除。
@@ -39,6 +55,7 @@ github:3469915488-oss/dsh-literature-hub#v2.1.3
 ## 文档
 
 - [使用指南](docs/使用指南.md)
+- [界面导览](docs/界面导览.md)
 - [Whisper 离线转写部署](docs/Whisper部署.md)
 - [更新记录](CHANGELOG.md)
 - [第三方许可证](THIRD-PARTY-NOTICES.md)
